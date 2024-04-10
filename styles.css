@@ -1,0 +1,20 @@
+.sign {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border-width: 3px;
+        border-style: solid;
+    border-image:
+            linear-gradient(to bottom,
+                red,
+                rgba(0, 0, 0, 0)) 1 100%;
+    background: rgb(0, 0, 0);
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign:hover {
+    transform: rotate(10deg)
+}
