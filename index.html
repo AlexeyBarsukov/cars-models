@@ -8,7 +8,6 @@
     <title>THREE JS - Lesson</title>
   </head>
   <body>
-    <button class="sign">Купить машину</button>
     <style>
       * {
         margin: 0;
@@ -51,7 +50,7 @@
 
         //Scene
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color("#E2DFE1");
+        scene.background = new THREE.Color("#87ceeb");
 
         //Camera
         const camera = new THREE.PerspectiveCamera(
@@ -60,7 +59,7 @@
           0.1,
           3000
         );
-        camera.position.set(0, 0.5, 1);
+        camera.position.set(0, 0.5, 10);
 
         //render
         const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -71,7 +70,7 @@
         {
           plain = new THREE.Mesh(
             new THREE.PlaneGeometry(1000, 1000),
-            new THREE.MeshBasicMaterial({ color: "#E2DFE1" })
+            new THREE.MeshBasicMaterial({ color: "#3e753b" })
           );
           plain.reciveShadow = true;
           plain.position.set(0, -1, 0);
@@ -133,7 +132,7 @@
         //OrbitControls
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 5;
+        controls.autoRotateSpeed = 0;
         controls.enableDamping = true;
 
         //Resize
